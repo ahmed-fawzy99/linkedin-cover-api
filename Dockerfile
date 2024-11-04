@@ -1,6 +1,14 @@
 # Use an official Node.js runtime as a base image
 FROM node:20
 
+RUN apt-get update && apt-get install -y \
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    fonts-noto-color-emoji \
+    && rm -rf /var/lib/apt/lists/*
+
+
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
