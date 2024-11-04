@@ -1,7 +1,6 @@
 # Use an official Node.js runtime as a base image
 FROM node:20
 
-# Install necessary dependencies for Puppeteer
 RUN apt-get update && apt-get install -y \
     libnss3 \
     libxss1 \
@@ -17,6 +16,22 @@ RUN apt-get update && apt-get install -y \
     libgbm1 \
     libpango-1.0-0 \
     libpangocairo-1.0-0 \
+    libxkbcommon0 \
+    libx11-xcb1 \
+    libxshmfence1 \
+    libgbm-dev \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libgdk-pixbuf2.0-0 \
+    libpango1.0-0 \
+    libharfbuzz0b \
+    libfontconfig1 \
+    libjpeg62-turbo \
+    libpng16-16 \
+    libfreetype6 \
+    libxtst6 \
+    libxrender1 \
+    libx11-6 \
     && rm -rf /var/lib/apt/lists/*
 
 
