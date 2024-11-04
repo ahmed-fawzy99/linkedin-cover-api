@@ -164,7 +164,12 @@ app.post('/get-linkedin-cover', async (req, res) => {
     `;
 
     try {
-        const browser = await puppeteer.launch({ headless: false });
+        const browser = await puppeteer.launch({
+            headless: true,
+            defaultViewport: null,
+            executablePath: '/usr/bin/google-chrome',
+            args: ['--no-sandbox'],
+        });
         const page = await browser.newPage();
         await page.setContent(htmlContent);
         console.log("HTML content set successfully.");
