@@ -50,7 +50,6 @@ app.post('/get-linkedin-cover', async (req, res) => {
                     margin-bottom: 40px;
                     height: 80px;
                 }
-                /* Stijl voor het logo */
                 .logo {
                     height: 100%;
                     width: auto;
@@ -80,83 +79,12 @@ app.post('/get-linkedin-cover', async (req, res) => {
         </head>
         <body>
         <div class="container">
-            <!-- Hier kunt u uw logo URL plakken -->
             <div class="header">
                 <img class="logo" src="https://interimu.nl/wp-content/uploads/2024/02/InterimU.svg" alt="InterimU">
             </div>
         
             <div class="vacancies">
-                <div class="vacancy">
-                    Interim Jurist Omgevingsrecht Milieu - Handhaving
-                    <span class="divider">|</span>
-                    <span class="location">Eindhoven</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€105/u</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Communicatiemedewerker
-                    <span class="divider">|</span>
-                    <span class="location">Roosendaal</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€80/u</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Sr. Projectondersteuner voor Herontwikkeling De Nieuwe Korf
-                    <span class="divider">|</span>
-                    <span class="location">Leusden</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€95/u</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Projectleider Inburgering en Opvang Oekraiense Vluchtelingen
-                    <span class="divider">|</span>
-                    <span class="location">IJsselstein</span>
-                    <span class="divider">|</span>
-                    <span class="rate">tarief niet vermeld</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Beleidsadviseur Sociaal Domain
-                    <span class="divider">|</span>
-                    <span class="location">Bergen op Zoom</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€90/u</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Adviseur Bedrijfsvoering voor Taakveld Bedrijfsvoering en Externe Dienstverlening
-                    <span class="divider">|</span>
-                    <span class="location">Utrecht</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€110/u</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Adviseur Inhuur
-                    <span class="divider">|</span>
-                    <span class="location">Breda</span>
-                    <span class="divider">|</span>
-                    <span class="rate">tarief niet vermeld</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Aanbestedingsjurist
-                    <span class="divider">|</span>
-                    <span class="location">Eemsdelta</span>
-                    <span class="divider">|</span>
-                    <span class="rate">tarief niet vermeld</span>
-                </div>
-        
-                <div class="vacancy">
-                    Interim Medewerkers WOZ Bezwaren
-                    <span class="divider">|</span>
-                    <span class="location">Hollands Kroon</span>
-                    <span class="divider">|</span>
-                    <span class="rate">€67/u</span>
-                </div>
+                ${vacanciesHTML} <!-- Dynamically insert vacancies here -->
             </div>
         </div>
         </body>
