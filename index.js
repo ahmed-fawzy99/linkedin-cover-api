@@ -24,7 +24,7 @@ app.post('/get-linkedin-cover', async (req, res) => {
             <span class="divider">|</span>
             <span class="location">${item.location}</span>
             <span class="divider">|</span>
-            <span class="rate">${item.max_tarif ? `€${item.max_tarif}/u` : 'tarief niet vermeld'}</span>
+            <span class="rate">${item.max_tarif ? `${item.max_tarif}` : 'tarief niet vermeld'}</span>
         </div>
     `).join('');
 
