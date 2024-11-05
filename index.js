@@ -59,7 +59,7 @@ app.post('/get-linkedin-cover', async (req, res) => {
                     gap: 25px;
                 }
                 .vacancy {
-                    font-size: 32px;
+                    font-size: 52px;
                     line-height: 1.4;
                     border-left: 5px solid #0066FF;
                     padding-left: 20px;
