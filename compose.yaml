@@ -1,5 +1,5 @@
 services:
-  app:
+  linkendin-post-cover:
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,3 +11,9 @@ services:
     environment:
       - NODE_ENV=development
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.linkendin-post-cover.rule=Host(`lipg.interimu.nl`)"
+      - "traefik.http.services.linkendin-post-cover.loadbalancer.server.port=3000"
+      - "traefik.http.routers.linkendin-post-cover.tls=true"
+      - "traefik.http.routers.linkendin-post-cover.tls.certresolver=myresolver"
